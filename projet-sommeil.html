@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant Intelligent du Sommeil | Enzo VIDY</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .project-detail-section {
+      padding-top: 8rem;
+      min-height: 80vh;
+    }
+    .detail-header {
+      margin-bottom: 2rem;
+    }
+    .detail-header h1 {
+      font-size: 2.5rem;
+      color: #a29bfe;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .project-meta {
+      display: flex;
+      gap: 1.5rem;
+      color: #ccc;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .meta-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .detail-content h2 {
+      color: #fff;
+      margin-top: 3rem;
+      border-left: 4px solid #6c5ce7;
+      padding-left: 1rem;
+      font-size: 1.5rem;
+    }
+    .detail-content h3 {
+      color: #a29bfe;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .detail-content p {
+      line-height: 1.8;
+      color: #ddd;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    
+    .architecture-diagram {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+    }
+
+    .diagram-caption {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: -1rem;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .tech-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .tech-card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .tech-card h4 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+      padding-bottom: 0.5rem;
+    }
+    .tech-card ul {
+      padding-left: 1.2rem;
+      margin: 0;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .tech-card li {
+      margin-bottom: 0.4rem;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 4rem;
+      color: #a29bfe;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .btn-back:hover {
+      transform: translateX(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  
+  <header class="glass-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">Enzo <span>VIDY</span></a>
+      <div class="menu">
+        <a href="index.html#projects">Retour aux projets</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container project-detail-section">
+      
+      <div class="floating-card" style="padding: 3rem;">
+        
+        <div class="detail-header">
+          <h1>Assistant Intelligent du Sommeil</h1>
+          <div class="project-meta">
+            <span class="meta-tag">👥 Équipe de 5</span>
+            <span class="meta-tag">📅 En cours (2025-2026)</span>
+            <span class="meta-tag">⚙️ Multi-langage, IoT, IA, CI/CD</span>
+          </div>
+        </div>
+
+        <div class="detail-content">
+          <p>
+            Ce projet de fin d'études vise à concevoir une solution complète (hardware et software) pour aider les utilisateurs à <strong>analyser et améliorer la qualité de leur sommeil</strong>. 
+            L'application collecte des données environnementales et physiologiques en temps réel via des objets connectés, les analyse grâce à l'Intelligence Artificielle, et restitue des recommandations personnalisées via une interface web.
+          </p>
+
+          <h2>Architecture Technique</h2>
+          <p>
+            Le défi principal réside dans l'orchestration de multiples services hétérogènes (Java, Python, Node.js) communiquant entre eux et avec des objets connectés (ESP32). L'ensemble est déployé via <strong>Docker</strong> avec une chaîne CI/CD.
+          </p>
+
+          <img src="./assets/img/Architecture_SAE.png" alt="Schéma d'architecture du projet" class="architecture-diagram">
+          <span class="diagram-caption">Figure 1 : Architecture globale du système (Microservices & IoT)</span>
+          
+          <div class="tech-stack-grid">
+            <div class="tech-card">
+              <h4>IoT & Collecte</h4>
+              <ul>
+                <li>Microcontrôleurs <strong>ESP32</strong></li>
+                <li><strong>Programmation Arduino</strong></li> <li>Capteurs (Température, Son, CO2)</li>
+                <li>Communication TCP Sockets</li>
+              </ul>
+            </div>
+            
+            <div class="tech-card">
+              <h4>Backend Central (Java)</h4>
+              <ul>
+                <li>Serveur TCP Multi-threadé</li>
+                <li>Centralisation des données capteurs</li>
+                <li>Architecture modulaire (Drivers)</li>
+              </ul>
+            </div>
+
+            <div class="tech-card">
+              <h4>Analyse & IA (Python/Node)</h4>
+              <ul>
+                <li>Scripts Python pour l'IA</li>
+                <li>API REST (Node.js/Express)</li>
+                <li>Base de données <strong>MongoDB</strong></li>
+              </ul>
+            </div>
+
+            <div class="tech-card">
+              <h4>Frontend (Vue.js)</h4>
+              <ul>
+                <li>Vue 3 + Vue Router</li>
+                <li>Visualisation Graphique (DataViz)</li>
+                <li>Authentification & Gestion profils</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Fonctionnalités Clés</h2>
+          <ul>
+            <li><strong>Monitoring en temps réel :</strong> Récupération des données capteurs via le serveur Java.</li>
+            <li><strong>Analyse intelligente :</strong> Algorithmes Python analysant les cycles de sommeil (mouvements, bruits).</li>
+            <li><strong>Réveil optimal :</strong> Calcul du meilleur moment pour réveiller l'utilisateur sans couper un cycle de sommeil.</li>
+            <li><strong>Tableau de bord :</strong> Interface web responsive pour visualiser l'historique des nuits et les scores de qualité.</li>
+          </ul>
+
+          <h2>DevOps & Méthodologie</h2>
+          <p>
+            Pour simuler un environnement professionnel, nous appliquons des contraintes strictes de développement :
+          </p>
+          <ul>
+            <li><strong>Conteneurisation :</strong> Tous les services (Java, Node, Mongo) sont dockerisés.</li>
+            <li><strong>CI/CD :</strong> Intégration continue via Jenkins/GitLab pour automatiser les tests et le build.</li>
+            <li><strong>Versioning :</strong> Gestion stricte des branches (Dev/Prod) sur Git.</li>
+          </ul>
+
+        </div>
+
+        <a href="index.html#projects" class="btn-back">← Retourner à la liste des projets</a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content" style="border:none; padding-top:2rem;">
+      <div class="footer-bottom">
+        <p>Copyright © 2025 - Portfolio Vidy Enzo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
