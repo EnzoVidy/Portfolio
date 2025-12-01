@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <svg width="800px" height="800px" viewBox="-4 0 34 34" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
         <g>
@@ -10,8 +11,8 @@
                 <path d="M6 18h14v1H6z"/>
                 <path d="M6 21h6v1H6z"/>
             </g>
-            <path fill="#474747" d="M18 2h1v6h-1z"/>
-            <path fill="#474747" d="M18 7h6v1h-6z"/>
+            <path fill="#000000" d="M18 2h1v6h-1z"/>
+            <path fill="#000000" d="M18 7h6v1h-6z"/>
         </g>
     </g>
 </svg>

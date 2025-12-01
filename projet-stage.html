@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Stage CReA2I | Enzo VIDY</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .project-detail-section {
+      padding-top: 8rem;
+      min-height: 80vh;
+    }
+    .detail-header {
+      margin-bottom: 3rem;
+    }
+    .detail-header h1 {
+      font-size: 2.5rem;
+      color: #a29bfe;
+      margin-bottom: 0.5rem;
+    }
+    .project-meta {
+      display: flex;
+      gap: 2rem;
+      color: #ccc;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .detail-content h2 {
+      color: #fff;
+      margin-top: 2.5rem;
+      border-bottom: 2px solid #6c5ce7;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .detail-content h3 {
+      color: #a29bfe;
+      margin-top: 1.5rem;
+    }
+    .detail-content ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .detail-content li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .detail-content li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #6c5ce7;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 3rem;
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .btn-back:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  
+  <header class="glass-header">
+    <nav class="container nav-bar">
+      <a href="index.html" class="logo">Enzo <span>VIDY</span></a>
+      <div class="menu">
+        <a href="index.html#projects">Retour aux projets</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container project-detail-section">
+      
+      <div class="floating-card" style="padding: 3rem;">
+        
+        <div class="detail-header">
+          <h1>Développement d’un simulateur industriel</h1>
+          <div class="project-meta">
+            <span>🏢 CReA2I (Héricourt)</span>
+            <span>⏱️ 8 semaines</span>
+            <span>🛠️ C#, .NET, Batch</span>
+          </div>
+        </div>
+
+        <div class="detail-content">
+          <p>
+            <strong>CReA2I</strong> est une entreprise spécialisée dans la conception d’outils de contrôle et de pilotage de chaînes industrielles pour des clients majeurs comme Stellantis. 
+            Durant ce stage, j’ai travaillé sur <strong>SimSEXTANT</strong>, un simulateur interne qui génère des ordres de fabrication (OF) et permet de tester la Commande Générale (CG) utilisée pour orchestrer les postes d’une ligne d’assemblage.
+          </p>
+
+          <h2>Objectifs du stage</h2>
+          <ul>
+            <li>Améliorer le simulateur afin d’aider l’équipe à développer et tester la future Commande Générale.</li>
+            <li>Ajouter de nouveaux types de points de flux et d’organes simulés.</li>
+            <li>Optimiser l’architecture du projet pour le rendre plus modulaire et maintenable.</li>
+            <li>Participer à des tests industriels permettant de valider la performance du système chez un client.</li>
+          </ul>
+
+          <h2>Réalisations principales</h2>
+
+          <h3>1. Intégration de nouveaux types d’ordres de fabrication (OF)</h3>
+          <p>J’ai ajouté plusieurs organes et types de données utilisés dans les chaînes industrielles afin qu’ils puissent être simulés correctement par SEXTANT. Cela impliquait :</p>
+          <ul>
+            <li>Analyse des spécifications Stellantis.</li>
+            <li>Mapping complet des données attendues.</li>
+            <li>Génération automatisée des ordres correspondants.</li>
+            <li>Vérification de leur interprétation par TIA Portal et l’automate.</li>
+          </ul>
+
+          <h3>2. Refonte de la gestion des projets & configuration</h3>
+          <p>SimSEXTANT devait pouvoir simuler plusieurs lignes ou organes différents sans modifier le code à chaque fois. J’ai :</p>
+          <ul>
+            <li>Restructuré le code en modules séparés (communication / projets / console).</li>
+            <li>Créé un dossier centralisé regroupant toutes les configurations d’organes.</li>
+            <li>Supprimé les dépendances circulaires via l’injection dynamique de fonctions.</li>
+            <li>Ajouté un système permettant de changer de projet directement via la console.</li>
+          </ul>
+          <p><em>Résultat :</em> Cette étape a fortement amélioré la modularité, a réduit la consommation mémoire et a facilité l’ajout futur de projets clients (dont l’EDM).</p>
+
+          <h3>3. Développement du point de flux « HostQuery »</h3>
+          <p>Le HostQuery est un nouveau type de point de flux dont le rôle est d’interroger dynamiquement le simulateur à chaque étape du processus. Ce modèle permet de simuler une ligne industrielle plus réaliste et un enchaînement progressif des opérations.</p>
+
+          <h3>4. Projet BENCH : tests de performance</h3>
+          <p>Pour évaluer la robustesse de la future Commande Générale EDM, j’ai participé à la création d’un projet géant simulant des centaines de points de flux. Les tests envoyaient des requêtes en continu pour valider la stabilité.</p>
+
+          <h2>Compétences développées</h2>
+          <ul>
+            <li><strong>Architecture logicielle :</strong> modularisation, découplage des modules, gestion de configuration.</li>
+            <li><strong>Développement C# / .NET :</strong> console, gestion de flux, manipulation de données binaires/hexadécimales.</li>
+            <li><strong>Communication industrielle :</strong> trames, protocoles, postes d’assemblage.</li>
+            <li><strong>Optimisation :</strong> analyse mémoire, refactoring, tests de charge.</li>
+          </ul>
+        </div>
+
+        <a href="index.html#projects" class="btn-back">← Retourner à la liste des projets</a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content" style="border:none; padding-top:2rem;">
+      <div class="footer-bottom">
+        <p>Copyright © 2025 - Portfolio Vidy Enzo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
