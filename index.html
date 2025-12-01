@@ -13,8 +13,10 @@
   <div class="cursor"></div>
   <header class="glass-header">
     <nav class="container nav-bar">
-      <div class="logo">Mon Portfolio</div>
-      <div class="menu">
+      <a href="#hero" class="logo">
+        Enzo <span>VIDY</span>
+      </a>
+        <div class="menu">
         <a href="#about">À propos</a>
         <a href="#skills">Compétences</a>
         <a href="#projects">Projets</a>
@@ -38,14 +40,52 @@
     </section>
 
     <section id="about" class="container about-section">
-      <div>
-        <h2>À propos</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <h3>Formation</h3>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <h3>Veille informatique</h3>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <a href="docs/CV.pdf" download class="btn-accent">Télécharger mon CV</a>
+      <h2>À propos de moi</h2>
+    
+      <div class="about-grid">
+        
+        <div class="about-text floating-card">
+          <h3>Qui suis-je ?</h3>
+          <p>
+            Étudiant en <strong>BUT Informatique</strong> (2023-2026), je me spécialise dans le développement d’applications logicielles et web. J’aime comprendre un besoin pour concevoir une solution <span class="highlight">claire, fiable et intuitive</span>.
+          </p>
+          <p>
+            Au fil de ma formation, j’ai travaillé sur des projets variés : un <strong>assistant intelligent du sommeil</strong> (IoT, IA, Web), la création du jeu de stratégie <em>Latroncules</em> en Java/JavaFX, ou encore le développement <strong>full stack</strong> d'une plateforme de gestion d'événements avec Vue.js et Node.js.
+          </p>
+          <p>
+            Je porte une attention particulière à la <strong>qualité du code</strong> et à l’<strong>expérience utilisateur</strong>. Curieux et autonome, j'apprécie le travail en équipe pour confronter les idées et créer des outils performants.
+          </p>
+          
+          <div class="cv-container">
+            <a href="docs/CV.pdf" download class="btn-accent">
+              <img src="assets/img/sheet.svg"> Télécharger mon CV
+            </a>
+          </div>
+        </div>
+    
+        <div class="about-details">
+          
+          <div class="detail-box floating-card">
+            <h3><img src="assets/img/mortarboard.svg"> Formation</h3>
+            <div class="timeline-item">
+              <span class="year">2023 - 2026 (En cours)</span>
+              <h4>BUT Informatique</h4>
+              <p class="school">IUT Nord Franche-Comté (Belfort)</p>
+              </div>
+          </div>
+    
+          <div class="detail-box floating-card">
+            <h3><img src="assets/img/antenne.svg"> Veille Informatique</h3>
+            <p class="veille-intro">Je suis l'actualité tech pour rester à jour :</p>
+            <ul class="veille-list">
+              <li><strong>Développement Web :</strong> Nouveautés des frameworks et langages.</li>
+              <li><strong>Architecture :</strong> Bonnes pratiques et conception logicielle.</li>
+              <li><strong>Tech & Innovation :</strong> Découvertes IoT et Intelligence Artificielle.</li>
+            </ul>
+            <p class="sources"><em>Sources : Korben, StackOverflow...</em></p>
+          </div>
+    
+        </div>
       </div>
     </section>
 
@@ -128,19 +168,50 @@
 
     <section id="contact" class="container">
       <h2>Contact</h2>
-      <form 
-        class="floating-card contact-form" 
-        action="https://formspree.io/f/xqavkwrv" 
-        method="POST"
-      >
-        <input type="hidden" name="_next" value="index.html?success=true" />
+      
+      <div class="contact-wrapper">
+        <div class="contact-info-box floating-card">
+          <h3>Mes Coordonnées</h3>
+          <p>N'hésitez pas à me contacter pour discuter de votre projet ou d'une opportunité.</p>
+          
+          <div class="info-item">
+            <img src="assets/img/pin.svg" alt="Localisation" class="info-icon">
+            <div class="info-text">
+              <span class="info-label">Localisation</span>
+              <span class="info-value">25400 Audincourt, France</span>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <img src="assets/img/phone.svg" alt="Téléphone" class="info-icon">
+            <div class="info-text">
+              <span class="info-label">Téléphone</span>
+              <span class="info-value">06 25 43 71 13</span>
+            </div>
+          </div>
         
-        <input type="text" name="prénom" placeholder="Votre prénom" required /> 
-        <input type="text" name="nom" placeholder="Votre nom" required />
-        <input type="email" name="_replyto" placeholder="Votre email" required />
-        <textarea rows="6" name="message" placeholder="Votre message"></textarea>
-        <button type="submit" class="btn-accent">Envoyer</button>
-      </form>
+          <div class="info-item">
+            <img src="assets/img/email.svg" alt="Email" class="info-icon">
+            <div class="info-text">
+              <span class="info-label">Email</span>
+              <span class="info-value">enzo.vidy1@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <form 
+          class="floating-card contact-form" 
+          action="https://formspree.io/f/xqavkwrv" 
+          method="POST"
+        >
+          <input type="hidden" name="_next" value="index.html?success=true" />
+          <input type="text" name="prénom" placeholder="Votre prénom" required /> 
+          <input type="text" name="nom" placeholder="Votre nom" required />
+          <input type="email" name="_replyto" placeholder="Votre email" required />
+          <textarea rows="6" name="message" placeholder="Votre message"></textarea>
+          <button type="submit" class="btn-accent">Envoyer</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -154,10 +225,10 @@
         
         <h3>Réseaux Sociaux</h3>
         <div class="social-links">
-          <a href="#" class="social-icon linkedin">
+          <a href="https://www.linkedin.com/in/enzo-vidy-aa8659334/" class="social-icon linkedin">
             <img src="assets/img/linkedin.svg" alt="LinkedIn" />
           </a>
-          <a href="#" class="social-icon github">
+          <a href="https://github.com/EnzoVidy" class="social-icon github">
             <img src="assets/img/github.svg" alt="GitHub" />
           </a>
         </div>
