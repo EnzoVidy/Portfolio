@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Enzo VIDY</title>
+  <link rel="icon" type="image/jpeg" href="./assets/img/icon.png" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -288,18 +289,18 @@
           </div>
         </div>
 
-        <form 
-          class="floating-card contact-form" 
-          action="https://formspree.io/f/xqavkwrv" 
-          method="POST"
-        >
-          <input type="hidden" name="_next" value="index.html?success=true" />
-          <input type="text" name="prénom" placeholder="Votre prénom" required /> 
-          <input type="text" name="nom" placeholder="Votre nom" required />
-          <input type="email" name="_replyto" placeholder="Votre email" required />
-          <textarea rows="6" name="message" placeholder="Votre message"></textarea>
-          <button type="submit" class="btn-accent">Envoyer</button>
-        </form>
+      <form 
+        id="contact-form"
+        class="floating-card contact-form" 
+        action="https://formspree.io/f/xqavkwrv" 
+        method="POST"
+      >
+        <input type="text" name="prénom" placeholder="Votre prénom" required /> 
+        <input type="text" name="nom" placeholder="Votre nom" required />
+        <input type="email" name="_replyto" placeholder="Votre email" required />
+        <textarea rows="6" name="message" placeholder="Votre message"></textarea>
+        <button type="submit" class="btn-accent">Envoyer</button>
+      </form>
       </div>
     </section>
   </main>

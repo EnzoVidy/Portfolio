@@ -646,6 +646,12 @@ section {
   color: #fff;
 }
 
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 400px;
+}
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #cccc;
